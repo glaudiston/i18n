@@ -23,10 +23,12 @@ i18n.changeLanguage=function(options){
 	}
 	if ( !options.language ) {
 		// Restore default user language
-		options.language=getCookie("lang");
+		if ( typeof getCookie != "undefined" )
+			options.language=getCookie("lang");
 	}
 	i18n.LANG=options.language;
-	setCookie("lang",i18n.LANG);
+	if ( typeof setCookie != "undefined" )
+		setCookie("lang",i18n.LANG);
 	$("i18n, div[i18n], span[i18n], label[i18n], option[i18n], select[i18n] option", options.object ).each(function(){
 		i18n.set( this, "innerHTML");
 	})

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
+  <script src='i18n.js'></script>
+  <script src='pt_BR.js'></script>
+ </head>
+ <body>
+ <label for='language' i18n>Language</label>
+ <select onchange='i18n.changeLanguage({ language : this.value })'>
+  <option>en_US</option>
+  <option>pt_BR</option>
+ </select>
+ <div><span i18n>Developed by</span> Glaudiston Gomes da Silva</div>
+ <div i18n>Enjoy</div>
+ </body>
+</html>
+
